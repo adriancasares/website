@@ -36,12 +36,12 @@
   background-color: #4296a8;
   width: fit-content;
   transition: background-color 0.3s;
-  border: 1px solid #0d262b;
-  margin: 40px auto auto auto;
+  border: 1px solid #0a3f4a;
+  margin: 40px auto 40px auto;
 }
 
 #back-to-main:hover {
-  background-color: #205863;
+  background-color: #0a3f4a;
 }
 
 #back-to-main svg {

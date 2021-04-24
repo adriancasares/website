@@ -3,6 +3,19 @@ layout: master
 ---
 <link rel="stylesheet" href="{{ 'assets/css/bloglist.css' }}">
 <div id="post-list">
+  {% if site.posts.size == 0 %}
+    <div id="no-posts">
+      <h1 class="header">No Blog Here!</h1>
+      <div class="description">
+        <img src="https://osyu.sh/thonk3k.png" alt="Hmm..." height="40px" width="40px">
+        <p>It looks like this blog doesn't have any posts yet. Maybe check back later?</p>
+      </div>
+      <a href="https://adrwastaken.dev" id="back-to-main">
+        <svg version="1.1" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="400.004px" height="400.004px" viewBox="0 0 400.004 400.004" style="enable-background:new 0 0 400.004 400.004;" xml:space="preserve"><g><path d="M382.688,182.686H59.116l77.209-77.214c6.764-6.76,6.764-17.726,0-24.485c-6.764-6.764-17.73-6.764-24.484,0L5.073,187.757	c-6.764,6.76-6.764,17.727,0,24.485l106.768,106.775c3.381,3.383,7.812,5.072,12.242,5.072c4.43,0,8.861-1.689,12.242-5.072	c6.764-6.76,6.764-17.726,0-24.484l-77.209-77.218h323.572c9.562,0,17.316-7.753,17.316-17.315	C400.004,190.438,392.251,182.686,382.688,182.686z"></path></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+        <p>Return to site</p>
+      </a>
+    </div>
+  {% else %}
   {% assign pagenums = site.posts.size | divided_by: 5.0 | ceil | minus: 1 | times: 1 %}
   {% for i in (0..pagenums) %}
   <div class="post-page">
@@ -43,7 +56,7 @@ layout: master
         </a>
       </div>
     {% endif %}
-
+{% endif %}
 </div>
 
 <script>
