@@ -1,0 +1,47 @@
+---
+layout: master
+---
+
+<link rel="stylesheet" href="{{ 'assets/css/post.css' | relative_url}}">
+
+<div id="post-content-wrapper">
+  <div id="post-content">
+    <div id="post-image-wrapper">
+      <img id="post-image" src="{{ page.image }}">
+    </div>
+    <h1 id="post-title">{{ page.title }}</h1>
+    <div id="post-meta">
+      <b id="post-date" class="details-meta-line" post-date-day='{{ page.date | date: "%-d" }}' post-date-month='{{ page.date | date: "%-m" }}' post-date-year='{{ page.date | date: "%Y" }}' post-date-unchecked>{{ page.date | date: "%B"}}{% assign day = page.date | date: "%-d" %} {% case day %}{% when '1' or '21' or '31' %}{{ day }}st{% when '2' or '22' %}{{ day }}nd{% when '3' or '23' %}{{ day }}rd{% else %}{{ day }}th{% endcase %}, {{ page.date | date: "%Y"}}</b>
+      <b class="details-meta-line">—</b>
+      <b id="post-category" class="details-meta-line" post-category='{{ page.post-category }}' post-category-unchecked></b>
+    </div>
+    <div id="post-text-content">
+      {{content}}
+    </div>
+  </div>
+</div>
+
+<script>
+  let post_date = document.getElementById('post-date');
+  let date = new Date();
+  let postDay = parseInt(post_date.getAttribute("post-date-day"));
+  let postMonth = parseInt(post_date.getAttribute("post-date-month"));
+  let postYear = parseInt(post_date.getAttribute("post-date-year"));
+  if (postDay == date.getDate() && postMonth == date.getMonth() + 1 && postYear == date.getFullYear()) {
+    post_date.innerHTML = "Today";
+  } else if ((postDay == date.getDate() - 1 && postMonth == date.getMonth() + 1 && postYear == date.getFullYear()) || (date.getDate() == 1 && (date.getMonth() == postMonth && date.getFullYear() == postYear) && ((postDay == 28 && postMonth == 2 && postYear % 4 != 0) || (postDay == 29 && postMonth == 2 && postYear % 4 == 0) || (postDay == 31 && [1,3,5,7,8,10,12].includes(postMonth)) || (postDay == 30 && [4,6,9,11].includes(postMonth)))) || (postMonth == 12 && postDay == 31 && postYear + 1 == date.getFullYear() && date.getMonth() == 0 && date.getDate() == 1)) {
+    post_date.innerHTML = "Yesterday";
+  } else if(postYear == date.getFullYear()) {
+    post_date.innerHTML = post_date.innerHTML.substr(0, post_date.innerHTML.length - 6)
+  }
+
+  let post_category = document.getElementById('post-category');
+  let category = post_category.getAttribute('post-category');
+  let color = "#a60e00";
+  if(category == "minecraft") {
+    post_category.innerHTML = "Minecraft"
+    color = "#60d19a"
+  }
+  else post_category.innerHTML = "Unknown"
+  post_category.style = "color: " + color;
+</script>

@@ -1,0 +1,55 @@
+#content-header {
+  font-family: 'hindguntur-bold', sans-serif;
+  font-size: 60px;
+  line-height: 60px;
+  margin: 0;
+  color: var(--navbar-website-name-color)
+}
+
+#content {
+  margin-top: 120px;
+  text-align: center;
+}
+
+#content-description {
+  color: var(--navbar-link-color);
+  display: flex;
+  margin: 20px auto auto auto;
+  width: fit-content;
+}
+
+#content-description img {
+  padding-top: 8px;
+  padding-right: 20px;
+}
+
+#content-description p {
+  max-width: 200px;
+  margin: 0;
+}
+
+#back-to-main {
+  text-decoration: none;
+  display: flex;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #4296a8;
+  width: fit-content;
+  transition: background-color 0.3s;
+  border: 1px solid #0d262b;
+  margin: 40px auto auto auto;
+}
+
+#back-to-main:hover {
+  background-color: #205863;
+}
+
+#back-to-main svg {
+  fill: #fff;
+  margin-right: 15px;
+}
+
+#back-to-main p {
+  margin: 0;
+  color: #fff;
+}
