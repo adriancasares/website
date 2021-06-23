@@ -1,8 +1,11 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { blogPosts } from '../lib/data';
+import Image from 'next/image'
+import ArticlePreview from '../components/home/ArticlePreview';
+import { getBlogPosts } from '../lib/blog';
+import { motion } from "framer-motion"
 
-export default function Home() {
+export default function Home({ blogPosts }) {
   return (
     <div>
       <Head>
@@ -12,24 +15,29 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>
-          My Website
-        </h1>
+        <motion.h1 layoutId="title">My Website</motion.h1>
+
+        {
+          blogPosts.map(post => {
+            return (
+              <ArticlePreview data={post}/>
+            )
+          })
+        }
       </main>
 
       <div>
-        {blogPosts.map(item => {
-          return <div key={item.slug}>
-            <div>
-              <Link href={`/blog/${item.slug}`}>
-                <a>{item.title}</a>
-              </Link>
-            </div>
-            <div>{item.date.toString()}</div>
-            <div>{item.content}</div>
-          </div>
-        })}
       </div>
     </div>
   )
+}
+
+export async function getStaticProps(context) {
+  const blogPosts = getBlogPosts();
+
+  return {
+    props: {
+      blogPosts
+    }
+  }
 }

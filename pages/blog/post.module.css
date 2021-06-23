@@ -1,0 +1,10 @@
+.FullPageArticle {
+    color: black;
+}
+
+.FullPageArticle__Content {
+    margin: auto;
+    max-width: 650px;
+    font-size: 16px;
+    line-height: 1.75;
+}

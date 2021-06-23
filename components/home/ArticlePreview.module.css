@@ -1,0 +1,23 @@
+.ArticlePreview {
+    background-color: #ddd;
+    color: #000;
+    border: 2px solid slateblue;
+    border-radius: 10px;
+    max-width: 300px;
+}
+
+.ArticlePreview__ContentWrapper {
+    padding: 10px;
+}
+
+.ArticlePreview__TextInfo {
+
+}
+
+.ArticlePreview__TextInfo__Name {
+    
+}
+
+.ArticlePreview__TextInfo__Description {
+    
+}
