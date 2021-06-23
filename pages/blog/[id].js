@@ -1,11 +1,29 @@
 import Head from 'next/head'
 import { getBlogPostFiles, getBlogPosts } from '../../lib/blog';
-import { blogPosts } from '../../lib/data';
 import { motion } from "framer-motion"
 import styles from './post.module.css'
 import Link from 'next/link'
 
+import ReactMarkdown from 'react-markdown'
+import rehypeRaw from 'rehype-raw'
+
+import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
+import {prism} from 'react-syntax-highlighter/dist/cjs/styles/prism'
+
 export default function BlogPage({ title, date, content }) {
+  const components = {
+    code({node, inline, className, children, ...props}) {
+      const match = /language-(\w+)/.exec(className || '')
+      return !inline && match ? (
+        <SyntaxHighlighter style={prism} language={match[1]} PreTag="div" children={String(children).replace(/\n$/, '')} useInlineStyles={false} {...props} />
+      ) : (
+        <code className={className} {...props}>
+          {children}
+        </code>
+      )
+    }
+  }
+
   return (
     <div>
       <Head>
@@ -19,7 +37,7 @@ export default function BlogPage({ title, date, content }) {
           <motion.div className={styles.FullPageArticle__Content} initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   transition={{ duration: 0.5, delay: 0 }}>
-            {content}
+    <ReactMarkdown components={components} children={content} rehypePlugins={rehypeRaw}/>
           </motion.div>
         </div>
       </main>
@@ -49,6 +67,5 @@ export async function getStaticProps(context) {
       getBlogPosts().find(post => {
         return post.id == params.id
       })
-    
   };
 }

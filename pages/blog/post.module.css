@@ -6,5 +6,20 @@
     margin: auto;
     max-width: 650px;
     font-size: 16px;
-    line-height: 1.75;
+    line-height: 30px;
+}
+
+.FullPageArticle__Content p, .FullPageArticle__Content h1, .FullPageArticle__Content h2, .FullPageArticle__Content h3, .FullPageArticle__Content h4, .FullPageArticle__Content h5, .FullPageArticle__Content h6 {
+    margin: 50px 0 0 0;
+}
+
+.FullPageArticle__Content h3 {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.FullPageArticle__Content img {
+    max-width: 650px;
+    margin: auto;
+    display: block;
 }

@@ -3,23 +3,6 @@ name: My First post
 date: 000
 thumbnail: dark-mode.png
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et mauris diam. Mauris eleifend sem luctus lectus semper, scelerisque gravida lorem varius. Nulla nibh lacus, vulputate vel maximus eget, rutrum eu velit. Donec sit amet convallis dolor. Ut ut semper eros. Curabitur sed est dictum, bibendum mauris in, varius ligula. Maecenas pulvinar tortor pulvinar nunc iaculis laoreet. Ut eros enim, mattis sit amet odio ac, euismod venenatis leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas consectetur, lorem vel egestas feugiat, ex eros auctor odio, nec eleifend dolor ex eu ligula. Suspendisse facilisis diam suscipit, commodo lectus vel, malesuada justo. Donec pretium quam vitae dolor lacinia hendrerit.
-
-Cras nibh arcu, elementum in erat eu, cursus egestas lectus. Cras fermentum vel ipsum in maximus. Mauris vestibulum eleifend mollis. Sed in ipsum et ex pretium aliquet. Fusce volutpat fermentum augue sit amet ultrices. Integer egestas egestas nisi non elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec mauris leo, ultrices vel condimentum non, aliquam ac lectus. Proin volutpat libero quis risus pellentesque suscipit non eu enim. Aenean quis justo cursus, condimentum odio in, lacinia mi. Sed ac finibus diam.
-
-Nunc ullamcorper nisi vitae nisl porta fermentum. Quisque at turpis sit amet erat blandit cursus sed non risus. Quisque pulvinar eros a massa vestibulum, vel vehicula magna interdum. Nam diam elit, luctus eget pulvinar vitae, porttitor quis metus. Etiam a vulputate est, eget bibendum ex. Suspendisse iaculis mattis facilisis. Nunc pulvinar sit amet lacus a varius. Integer a ultricies metus, ac iaculis diam. Nunc orci sem, luctus et malesuada in, commodo eget enim. Suspendisse tempus dui nec euismod pulvinar. Quisque varius vestibulum felis, sed dictum diam ultricies vitae.
-
-Maecenas molestie tellus elementum enim suscipit rhoncus. Donec sed purus id sem pretium interdum hendrerit sit amet tellus. Vivamus et magna dictum mi mollis rhoncus in quis neque. Phasellus et nulla rutrum, placerat orci in, bibendum nibh. Fusce eget justo eu tortor facilisis iaculis. Donec a sapien magna. Etiam fermentum sagittis lacus id ornare. Vivamus viverra justo malesuada, faucibus elit in, sodales tellus. Morbi quis ultrices eros, ut congue lectus. Maecenas pharetra bibendum augue, et vestibulum augue elementum id. Integer vehicula massa nulla, id rutrum tellus malesuada eu.
-
-Proin maximus vitae lorem eget vestibulum. In maximus egestas eros vel aliquet. Morbi dictum finibus ex quis commodo. Mauris condimentum dolor lacus. Nullam nec imperdiet eros, porttitor vestibulum lacus. Suspendisse potenti. Morbi vitae diam tincidunt, maximus orci eu, vehicula augue.
-
-# Behind Canvas+
-
-- Table of Contents
-
-**Advanced Article**!
-Hey! This article is fairly techinal...  you may not understand it well if you're not well-versed in tech.
-
 In January 2021, I released Canvas+ to the chrome web store. It's a chrome extension that improves your experience using Canvas, the LMS developed by Instructure. This blog post is a deep dive into the tech that makes it possible.
 
 Firstly, here's some of the important extension links:
@@ -85,7 +68,7 @@ For starters, you need to register as a Chrome Webstore Developer, which costs $
 
 I bought the liscence, and I really wish I would have read this before buying it:
 
-![Behind%20Canvas+%20e7c79f0680d44581a09d001b4aa28db9/Untitled%201.png](Behind%20Canvas+%20e7c79f0680d44581a09d001b4aa28db9/Untitled%201.png)
+![https://i.imgur.com/AGZKdEs.png](https://i.imgur.com/AGZKdEs.png)
 
 So yes, I did use my personal account to publish the extension. I would definetely prefer to have a dedicated account for the extension, so I might look into doing that later.
 

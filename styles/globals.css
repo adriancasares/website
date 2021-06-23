@@ -18,3 +18,39 @@ a {
 #__app {
   color: var(--text-color)
 }
+
+.prismjs {
+  color: rgb(55, 53, 47);
+  background: rgb(247, 246, 243);
+  padding: 34px 16px 32px 32px;;
+  font-size: 13.6px;
+  overflow-x: scroll;
+}
+
+.prismjs .token.atrule, .prismjs .token.attr-value, .prismjs .token.keyword{
+  color: #07a;
+}
+
+.prismjs .token.function, .prismjs .token.class-name {
+  color: #DD4A68;
+}
+
+.prismjs .token.selector, .prismjs .token.attr-name, .prismjs .token.string, .prismjs .token.char, .prismjs .token.builtin, .prismjs .token.inserted {
+  color: #690
+}
+
+.prismjs .token.operator, .prismjs .token.entity, .prismjs .token.url, .prismjs .language-css .token.string, .prismjs .style .token.string {
+  color: #9a6e3a;
+}
+
+.prismjs .token.punctuation {
+  color: #999;
+}
+
+.prismjs .token.comment, .prismjs .token.prolog, .prismjs .token.doctype, .prismjs .token.cdata {
+  color: slategray;
+}
+
+.prismjs .token.property, .prismjs .token.tag, .prismjs .token.boolean, .prismjs .token.number, .prismjs .token.constant, .prismjs .token.symbol, .prismjs .token.deleted {
+  color: #905;
+}
