@@ -1,0 +1,20 @@
+.Section {
+    min-height: 100px;
+    width: 100%;
+}
+
+.Section[data-section-id="about"] {
+    background: var(--about-panel-background);
+}
+
+.Section[data-section-id="about"] h1 { 
+    color: var(--about-panel-header-color);
+}
+
+.Section[data-section-id="about"] h2 { 
+    color: var(--about-panel-subheader-color);
+}
+
+.Section[data-section-id="about"] p { 
+    color: var(--about-panel-paragraph-color);
+}

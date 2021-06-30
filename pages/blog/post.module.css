@@ -23,3 +23,7 @@
     margin: auto;
     display: block;
 }
+
+.FullPageArticle__Content a           { color: #4ba2d4 }
+.FullPageArticle__Content a:hover, .FullPageArticle__Content a:hover a:focus { color: #5580c9 }
+.FullPageArticle__Content a:active         { color: #c9558d }

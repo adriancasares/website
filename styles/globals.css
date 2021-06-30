@@ -1,9 +1,15 @@
 html,
 body {
   padding: 0;
+  font-family: 'Open Sans', 'Helvetica Neue', arial, sans-serif;
+}
+
+body, h1, h2, h3, h4, h5, h6, p {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+h1 {
+  font-family: 'Source Serif Pro', serif;
 }
 
 a {
@@ -16,7 +22,15 @@ a {
 }
 
 #__app {
-  color: var(--text-color)
+  background-color: var(--bg-color)
+}
+
+h1 {
+  color: var(--h1-color)
+}
+
+p {
+  color: var(--p-color)
 }
 
 .prismjs {

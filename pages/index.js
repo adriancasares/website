@@ -4,6 +4,11 @@ import Image from 'next/image'
 import ArticlePreview from '../components/home/ArticlePreview';
 import { getBlogPosts } from '../lib/blog';
 import { motion } from "framer-motion"
+import Section from '../components/structure/Section';
+import LeftRightSplit from '../components/structure/LeftRightSplit';
+import Left from '../components/structure/Left';
+import Right from '../components/structure/Right';
+import PolkaDotArray from '../components/home/features/polka/PolkaDotArray';
 
 export default function Home({ blogPosts }) {
   return (
@@ -15,15 +20,31 @@ export default function Home({ blogPosts }) {
       </Head>
 
       <main>
-        <motion.h1 layoutId="title">My Website</motion.h1>
+        <Section id="about">
+          <LeftRightSplit maxWidth={1800}>
+            <Left style={{paddingLeft:100,maxWidth:360,paddingTop:80}}>
+              <h1 style={{fontSize:75}}>adr</h1>
+              <p style={{fontSize:14,lineHeight:2,paddingTop:20}}>
+              Hey! I'm a student software engineer working on Minecraft plugins, web development, and more.
+              </p>
+            </Left>
+            <Right style={{maxWidth:360,paddingRight:100,paddingTop:80}}>
+              <PolkaDotArray size={5}/>
+            </Right>
+          </LeftRightSplit>
+        </Section>
 
+
+
+        {/* <h1>adr</h1>
+        <p>Hey! I'm a student software engineer working on Minecraft plugins, web development, and more.</p>
         {
           blogPosts.map(post => {
             return (
               <ArticlePreview data={post}/>
             )
           })
-        }
+        } */}
       </main>
 
       <div>
