@@ -1,13 +1,11 @@
 .Left {
     float: left;
-    height: 100%;
 }
 
 .Right {
     float: right;
-    height: 100%;
 }
 
 .Side {
-    background-color: aquamarine;
+    height: 100%;
 }
