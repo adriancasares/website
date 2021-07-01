@@ -9,6 +9,7 @@ import LeftRightSplit from '../components/structure/LeftRightSplit';
 import Left from '../components/structure/Left';
 import Right from '../components/structure/Right';
 import PolkaDotArray from '../components/home/features/polka/PolkaDotArray';
+import Side from '../components/structure/Side';
 
 export default function Home({ blogPosts }) {
   return (
@@ -22,15 +23,21 @@ export default function Home({ blogPosts }) {
       <main>
         <Section id="about">
           <LeftRightSplit maxWidth={1800}>
-            <Left style={{paddingLeft:100,maxWidth:360,paddingTop:80}}>
-              <h1 style={{fontSize:75}}>adr</h1>
-              <p style={{fontSize:14,lineHeight:2,paddingTop:20}}>
-              Hey! I'm a student software engineer working on Minecraft plugins, web development, and more.
-              </p>
+            <Side key="right" side="right" style={{maxWidth:360}} queries={{
+              '': <div style={{paddingLeft:100,paddingTop:80}}>
+                    <h1 style={{fontSize:75}}>adr</h1>
+                    <p style={{fontSize:14,lineHeight:2,paddingTop:20}}>Hey! I'm a student software engineer working on Minecraft plugins, web development, and more.</p>
+                  </div>
+            }}/>
+            {/* <Left style={{paddingLeft:100,maxWidth:360,paddingTop:80}}>
+              
             </Left>
-            <Right style={{maxWidth:360,paddingRight:100,paddingTop:80}}>
-              <PolkaDotArray size={5}/>
-            </Right>
+            <Right style={{maxWidth:360,paddingRight:100,paddingTop:80}} queries={
+              {
+                '(min-width: 500px)': <PolkaDotArray size={5}/>,
+                '': <div></div>
+              } 
+            }></Right> */}
           </LeftRightSplit>
         </Section>
 
