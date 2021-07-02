@@ -7,8 +7,16 @@
     background: var(--about-panel-background);
 }
 
+.Section[data-section-id="blog"] {
+    background: var(--blog-panel-background);
+}
+
 .Section[data-section-id="about"] h1 { 
     color: var(--about-panel-header-color);
+}
+
+.Section[data-section-id="blog"] h1 {
+    color: var(--blog-panel-header-color);
 }
 
 .Section[data-section-id="about"] h2 { 

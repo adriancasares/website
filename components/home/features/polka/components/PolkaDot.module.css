@@ -1,0 +1,19 @@
+.PolkaDot {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.PolkaDot.Large {
+    height: 80px;
+    width: 80px;
+}
+
+.PolkaDot.Medium {
+    height: 60px;
+    width: 60px;
+}
+
+.PolkaDot.Small {
+    height: 40px;
+    width: 40px;
+}

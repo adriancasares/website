@@ -2,6 +2,7 @@ html,
 body {
   padding: 0;
   font-family: 'Open Sans', 'Helvetica Neue', arial, sans-serif;
+  background-color: #EEE;
 }
 
 body, h1, h2, h3, h4, h5, h6, p {
@@ -30,7 +31,8 @@ h1 {
 }
 
 p {
-  color: var(--p-color)
+  color: var(--p-color);
+  font-size: 14px;
 }
 
 .prismjs {

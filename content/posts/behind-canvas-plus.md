@@ -2,6 +2,7 @@
 name: My First post
 date: 000
 thumbnail: dark-mode.png
+excerpt: In January 2021, I released Canvas+ to the chrome web store. It's a chrome extension that improves your experience using Canvas, the LMS developed by Instructure. This blog post is a deep dive into the tech that makes it possible.
 ---
 In January 2021, I released Canvas+ to the chrome web store. It's a chrome extension that improves your experience using Canvas, the LMS developed by Instructure. This blog post is a deep dive into the tech that makes it possible.
 

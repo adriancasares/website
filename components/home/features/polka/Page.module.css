@@ -1,0 +1,8 @@
+.SocialsWrapper {
+    padding-bottom: 40px;
+}
+
+.SocialsWrapper__Row {
+    padding: 20px 0 0 0;
+    display: flex;
+}
