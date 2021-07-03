@@ -1,3 +1,4 @@
+import { transform } from 'framer-motion';
 import React from 'react'
 import PolkaDot from './PolkaDot'
 
@@ -39,8 +40,10 @@ export default function PolkaDotArray(props) {
     }
 
     return (
-        <div className={styles.PolkaDotArray} style={{transform: `translateX(${(length * -1 * space) - 60}px)`}}>
-            {dots}        
+        <div className="PolkaDotArray__Wrapper" style={props.style}>
+            <div className={styles.PolkaDotArray} style={{transform:`translateX(${(length * -1 * space) - 60}px)`}}>
+                {dots}        
+            </div>
         </div>
     )
 }

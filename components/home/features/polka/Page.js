@@ -35,7 +35,7 @@ export default function Page(props) {
     const blogPosts = props.blogPosts || []
 
     return (<>
-        <Section id="about">
+        <Section id="about" style={{paddingBottom:30}}>
           <LeftRightSplit maxWidth={1800}>
 
             {/* Controller for left panel */}
@@ -73,25 +73,25 @@ export default function Page(props) {
               /*********/
               '(min-width:800px)': <Side key="right" side="right" style={{maxWidth:360,paddingRight:115,paddingTop:140}}>
                     <QueryController queries={{
-                        '(min-width:1050px)': <PolkaDotArray key="right__feature" length={5}/>,
-                        '(min-width:950px)': <div style={{paddingTop:100}} key="right__feature"><PolkaDotArray length={4} colorOffset={1}/></div>,
-                        '': <div style={{paddingTop:200}} key="right__feature"><PolkaDotArray length={3} colorOffset={1}/></div>
+                        '(min-width:1050px)': <PolkaDotArray key="right__feature" length={5} style={{paddingTop:30}}/>,
+                        '(min-width:950px)': <div style={{paddingTop:100}} key="right__feature"><PolkaDotArray length={4} colorOffset={1} style={{paddingTop:30}}/></div>,
+                        '': <div style={{paddingTop:200}} key="right__feature"><PolkaDotArray length={3} colorOffset={1} style={{paddingTop:30}}/></div>
                     }}/>,
                 </Side>,
 
               /*********/
               '(min-width:750px)': <Side key="right" side="right" style={{maxWidth:360,paddingRight:95,paddingTop:340}}>
-                    <PolkaDotArray key="right__feature" length={3} colorOffset={1}/>
+                    <PolkaDotArray key="right__feature" length={3} colorOffset={1} style={{paddingTop:30}}/>
                 </Side>,
             
               /*********/
               '(min-width:650px)': <Side key="right" side="right" style={{maxWidth:360,paddingRight:80,paddingTop:340}}>
-                <PolkaDotArray key="right__feature" length={3} colorOffset={1}/>
+                <PolkaDotArray key="right__feature" length={3} colorOffset={1} style={{paddingTop:30}}/>
               </Side>,
 
               /*********/
               '(min-width:550px)': <Side key="right" side="right" style={{maxWidth:360,paddingRight:80,paddingTop:340}}>
-                <PolkaDotArray key="right__feature" length={3} colorOffset={1} invertedStaircase={true}/>
+                <PolkaDotArray key="right__feature" length={3} colorOffset={1} invertedStaircase={true} style={{paddingTop:30}}/>
               </Side>,
 
               /*********/
