@@ -30,7 +30,7 @@ export default function BlogPage({ name, date, content }) {
   return (
     <div>
       <Head>
-        <title>Blog Post</title>
+        <title>{name}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

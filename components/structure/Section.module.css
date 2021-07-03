@@ -1,5 +1,5 @@
 .Section {
-    min-height: 100px;
+    min-height: 30px;
     width: 100%;
 }
 
@@ -9,6 +9,13 @@
 
 .Section[data-section-id="blog"] {
     background: var(--blog-panel-background);
+}
+
+.Section[data-section-id="404"] {
+    font-family: 'DM Mono', monospace;
+    text-align: center;
+    background-color: rgb(255, 82, 59);
+    color: white;
 }
 
 .Section[data-section-id="about"] h1 { 
