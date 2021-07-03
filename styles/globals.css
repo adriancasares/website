@@ -21,17 +21,17 @@ a {
   box-sizing: border-box;
 }
 
-#__app {
-  background-color: var(--bg-color)
-}
-
-h1 {
-  color: var(--h1-color)
-}
-
 p {
-  color: var(--p-color);
-  font-size: 14px;
+  font-size: 16px;
+}
+
+code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  color: #EB5757;
+  background: rgba(135,131,120,0.15);
+  font-size: 85%;
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
 }
 
 .prismjs {

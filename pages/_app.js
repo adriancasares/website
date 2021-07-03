@@ -1,10 +1,11 @@
 import '../styles/globals.css'
-import { AnimateSharedLayout, m } from "framer-motion"
 
 import seed from 'seed-random'
 import { chance, choice } from '../lib/utils'
 
 import { useState, useEffect } from 'react'
+
+import Layout from '../components/structure/Layout'
 
 function App({ Component, pageProps }) {
   const config = {
@@ -89,11 +90,11 @@ function App({ Component, pageProps }) {
   const [styles, setStyles] = useState(convertStyling(generateStyling()))
 
   return (
-    <AnimateSharedLayout>
-        <div id="__app" style={styles}>
-          <Component {...pageProps} />
-        </div>
-    </AnimateSharedLayout>
+    <div id="__app" style={styles}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </div>
   )
 }
 

@@ -1,6 +1,6 @@
 ---
 name: My First post
-date: 000
+date: 1625288400000
 thumbnail: dark-mode.png
 excerpt: In January 2021, I released Canvas+ to the chrome web store. It's a chrome extension that improves your experience using Canvas, the LMS developed by Instructure. This blog post is a deep dive into the tech that makes it possible.
 ---
@@ -12,7 +12,7 @@ Firstly, here's some of the important extension links:
 - [Website](https://canvasplus.adrwas.dev)
 - [Install](https://chrome.google.com/webstore/detail/canvas%2B/kdkadcnebmokaadholinmnpjelphnghh)
 
-### 🌱  The Idea
+### The Idea
 
 Before I made the first version of the extension, many of my teachers would use the modules feature for their Canvas courses.
 
@@ -53,7 +53,7 @@ If you couldn't tell by the code snippet, I was not very experienced with JavaSc
 
 This was pretty much the first version that got released, and even though I finished this in an afternoon, I spent about a week making a humble website for the project. This was everything for version 0.0.1. I forgot that there was only one feature in the first version... There was so little material that I advertised "more features to come"- I wasn't lying about that though.
 
-### 🌿  Adding More Features
+### Adding More Features
 
 I kept my promise of more features. Five months later, as of version 0.2, the extension includes a search bar, dark mode, and faster links. All of these can be toggled using the extension popup. Of course, this is not a very long list all things considered. It's a pace of less than one addition per month, and I didn't even make the quick links feature.
 
@@ -61,7 +61,7 @@ I thought it would be worth noting that first of all, this is definitely a side 
 
 With that said, let's talk about the juicy coding.
 
-### 📖  Behind the scenes: Being a developer
+### Behind the scenes: Being a developer
 
 Now that I had my idea and my code, it was time to release it, which took some research. If you want a boring article on the step-by-step process, [here you go](https://developer.chrome.com/docs/webstore/publish/), but I'll share my experience here.
 
@@ -75,7 +75,7 @@ So yes, I did use my personal account to publish the extension. I would definete
 
 After making the account, submitting the extension is pretty easy... you just zip up the extension, enter some details, and submit it for review. You have to submit the extension every time you want to update it, so I've of course submitted the extension multiple times, and the response time seems to get exponentially faster... It went from four days to about a day, to about an hour, and most recently, my extension was approved in just 60 seconds.
 
-### 🧭 Search Bar
+### Search Bar
 
 The search box is without doubt the most universally liked feature. No matter your preferences, this tool will be hard to live without.
 
@@ -124,7 +124,7 @@ The early version of search would actually fetch the non-api modules page and so
 
 Another issue was that for a while search was simply spaghetti-code. It doesn't directly affect the end user if the code is messy, but there were certainly issues that caused an inefficient system, a lot of times having to do with JavaScript's messy async system.
 
-### 🏃‍♂️ Faster Links
+### Faster Links
 
 Faster links isn't my feature... but it is a feature. I use a library called [QuickLink](https://github.com/GoogleChromeLabs/quicklink), which simply preloads pages in idle time. When I first tested it, I would get crazy speeds of 2x and 4x the usual, but something seems to have changed, because a test I did in May conculded only a 40% speed increase. Nonetheless, its still a usefull feature to have, but I do see potential for improvement.
 
@@ -134,7 +134,7 @@ A side benefit of this would be link previews, like the ones in google docs.
 
 ![Behind%20Canvas+%20e7c79f0680d44581a09d001b4aa28db9/Untitled%203.png](Behind%20Canvas+%20e7c79f0680d44581a09d001b4aa28db9/Untitled%203.png)
 
-### 🌗 Dark Mode
+### Dark Mode
 
 Not everyone likes this feature, and even I personally am on the fence about it, but dark mode does what you would expect, it makes everything dark.
 
@@ -161,7 +161,7 @@ Injection was by far the easiest part of dark mode, though. Creating the CSS fil
 
 Alltogether, `dark.css` is just over 300 lines, and it's pretty compact, though still readable. Right now a dim mode is in the works, and we (someone else is working with me on dim mode) were able to copy/paste and swap out the CSS variables to create a whole new look in 5 minutes.
 
-### 🔬 A Closer Look at Canvas
+### A Closer Look at Canvas
 
 While developing this extension, I've used the standard set of resources to write my code... StackOverflow, other chrome extensions, documentation, the usual. But something I only recently started looking at was [Instructure's GitHub](https://github.com/instructure).
 
@@ -192,7 +192,7 @@ For the frontend, Canvas uses [ReactJS](https://reactjs.org/), which is a librar
 
 Other than that, I haven't looked too deeply into the code, since, as I mentioned, I don't know Ruby, but maybe I'll learn it some day and get back to you!
 
-### 🏁 Conclusion
+### Conclusion
 
 My extension has amazing features already, but I'm not ready to stop. I think I already have the best Canvas-related chrome extension, (yes, there are many) but I want to expand the userbase and impact as many people's school experience as possible. As things get back to normal, Canvas will become less integral in everyone's school life, but I think I'll still offer a valuable tool that put simply, makes learning better. 
 
