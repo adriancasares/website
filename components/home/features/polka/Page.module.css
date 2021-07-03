@@ -3,6 +3,14 @@
 }
 
 .SocialsWrapper__Row {
-    padding: 20px 0 0 0;
+    padding: 10px 0;
     display: flex;
+
+    
+    cursor: pointer;
+}
+
+.SocialsWrapper__Row:hover p {
+    color: var(--about-panel-subheader-color);
+    text-decoration: underline;
 }

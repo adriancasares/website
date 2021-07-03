@@ -69,3 +69,62 @@ code {
 .prismjs .token.property, .prismjs .token.tag, .prismjs .token.boolean, .prismjs .token.number, .prismjs .token.constant, .prismjs .token.symbol, .prismjs .token.deleted {
   color: #905;
 }
+
+@media only screen and (min-width : 550px) {
+  
+  .split {
+    display: flex;
+  }
+  
+  .side.left {
+    margin-right: 20px;
+  }
+  
+  .side.right {
+    margin-left: 20px;
+  }
+  
+  .side.w-10 {
+    width: calc(10% - 20px);
+  }
+  
+  .side.w-20 {
+    width: calc(20% - 20px);
+  }
+  
+  .side.w-30 {
+    width: calc(30% - 20px);
+  }
+  
+  .side.w-40 {
+    width: calc(40% - 20px);
+  }
+  
+  .side.w-50 {
+    width: calc(50% - 20px);
+  }
+  
+  .side.w-60 {
+    width: calc(60% - 20px);
+  }
+  
+  .side.w-70 {
+    width: calc(70% - 20px);
+  }
+  
+  .side.w-80 {
+    width: calc(80% - 20px);
+  }
+  
+  .side.w-90 {
+    width: calc(90% - 20px);
+  }
+  
+  .side.w-100 {
+    width: calc(100% - 20px);
+  }
+}
+
+img {
+  image-rendering: -webkit-optimize-contrast;
+}

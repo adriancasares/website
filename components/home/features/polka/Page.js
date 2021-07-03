@@ -11,6 +11,8 @@ import ArticlePreview from '../../components/ArticlePreview'
 
 import styles from './Page.module.css'
 
+import Link from 'next/link'
+
 export default function Page(props) {
     const aboutPanel__content = <>
         <h1 style={{fontSize:75,fontWeight:900}}>adr</h1>
@@ -22,11 +24,13 @@ export default function Page(props) {
                 Object.entries(props.socials).map((ent) => {
                     const [k, v] = [ent[0], ent[1]]
 
-                    return <div key={k} className={styles.SocialsWrapper__Row}>
-                        <svg style={{fill: 'var(--about-panel-paragraph-color)', paddingTop: 1}} xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"> { v[2] } </svg>
-                        <div style={{height:24, paddingTop:10, marginLeft:10, marginRight:10}}><Bullet size={4} color='var(--about-panel-paragraph-color)'/></div>
-                        <p>{ v[0] }</p>
-                    </div>
+                    return <Link href={v[1]}>
+                        <div key={k} className={styles.SocialsWrapper__Row}>
+                            <svg style={{fill: 'var(--about-panel-paragraph-color)', paddingTop: 1}} xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"> { v[2] } </svg>
+                            <div style={{height:24, paddingTop:10, marginLeft:10, marginRight:10}}><Bullet size={4} color='var(--about-panel-paragraph-color)'/></div>
+                            <p>{ v[0] }</p>
+                        </div>  
+                    </Link>
                 })
             }
         </div>

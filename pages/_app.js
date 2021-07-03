@@ -12,8 +12,8 @@ function App({ Component, pageProps }) {
     features: ['polka-dots'/*, 'curves', 'rectangles'*/]
   }
 
-  const generateStyling = () => {
-    var random = /*seed(new Date().toDateString());*/ Math.random
+  const generateStyling = (random = Math.random) => {
+    //var random = /*seed(new Date().toDateString());*/ Math.random
     const styling = {}
 
     styling.feature = choice(config.features, random)
@@ -87,14 +87,18 @@ function App({ Component, pageProps }) {
     return css;
   }
 
-  const [styles, setStyles] = useState(convertStyling(generateStyling()))
+  const [styles, setStyles] = useState(convertStyling(generateStyling(seed(new Date().toDateString()))))
+
+  const changeThemeButtonClickHandler = () => {
+    setStyles(convertStyling(generateStyling(Math.random)))
+  }
 
   return (
-    <div id="__app" style={styles}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </div>
+    <Layout>
+      <div id="__app" style={styles}>
+        <Component {...pageProps} onChangeThemeButtonClick={changeThemeButtonClickHandler}/>
+      </div>
+    </Layout>
   )
 }
 

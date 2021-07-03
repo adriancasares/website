@@ -3,9 +3,9 @@ import { getBlogPosts } from '../lib/blog';
 
 import Page__PolkaDots from '../components/home/features/polka/Page'
 
-import { useEffect } from 'react';
+import styles from './index.module.css'
 
-export default function Home({ blogPosts }) {
+export default function Home({ blogPosts, onChangeThemeButtonClick }) {
 
   const aboutPanel__content = (<>
     <h1 style={{fontSize:75}}>adr</h1>
@@ -23,6 +23,10 @@ export default function Home({ blogPosts }) {
       </Head>
 
       <main>
+        <div className={styles.ChangeThemeButton} onClick={onChangeThemeButtonClick}>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180"><rect width="180" height="180" rx="13.55"/><circle cx="90" cy="90" r="18.39"/><circle cx="135.12" cy="45.24" r="18.39"/><circle cx="45.12" cy="135.24" r="18.39"/></svg>
+        </div>
+
         <Page__PolkaDots bio={
           /* Biography */ "Hey! I'm a student software engineer working on Minecraft plugins, web development, and more."
         } socials={{

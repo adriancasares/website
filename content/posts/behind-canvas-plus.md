@@ -1,8 +1,8 @@
 ---
-name: My First post
+name: Behind Canvas+
 date: 1625288400000
-thumbnail: dark-mode.png
-excerpt: In January 2021, I released Canvas+ to the chrome web store. It's a chrome extension that improves your experience using Canvas, the LMS developed by Instructure. This blog post is a deep dive into the tech that makes it possible.
+thumbnail: oxford.png
+excerpt: In January 2021, I released Canvas+ to the chrome web store, a chrome extension that improves your experience using Canvas, the LMS developed by Instructure. This blog post is a deep dive into the tech that makes it possible.
 ---
 In January 2021, I released Canvas+ to the chrome web store. It's a chrome extension that improves your experience using Canvas, the LMS developed by Instructure. This blog post is a deep dive into the tech that makes it possible.
 
@@ -16,7 +16,7 @@ Firstly, here's some of the important extension links:
 
 Before I made the first version of the extension, many of my teachers would use the modules feature for their Canvas courses.
 
-![Behind%20Canvas+%20e7c79f0680d44581a09d001b4aa28db9/Untitled.png](Behind%20Canvas+%20e7c79f0680d44581a09d001b4aa28db9/Untitled.png)
+![Modules in Canvas](/post-assets/behind-canvas-plus/modules.png)
 
 Modules are essentially groups of pages, and that's how most teachers organize their content. They work pretty well, but some classes have the most recent modules at the very bottom of the page, meaning that by the end of the semester it would take a *long* time to find current assignments. One class of mine was so large that by the end of the school year, it took about a minute to reach the bottom, at least when using a trackpad. And so, the idea was born.
 
@@ -69,7 +69,7 @@ For starters, you need to register as a Chrome Webstore Developer, which costs $
 
 I bought the liscence, and I really wish I would have read this before buying it:
 
-![https://i.imgur.com/AGZKdEs.png](https://i.imgur.com/AGZKdEs.png)
+![Create a Developer Account](/post-assets/behind-canvas-plus/create-a-developer-account.png)
 
 So yes, I did use my personal account to publish the extension. I would definetely prefer to have a dedicated account for the extension, so I might look into doing that later.
 
@@ -79,7 +79,8 @@ After making the account, submitting the extension is pretty easy... you just zi
 
 The search box is without doubt the most universally liked feature. No matter your preferences, this tool will be hard to live without.
 
-![Behind%20Canvas+%20e7c79f0680d44581a09d001b4aa28db9/image_(7).png](Behind%20Canvas+%20e7c79f0680d44581a09d001b4aa28db9/image_(7).png)
+<br>
+<img src="/post-assets/behind-canvas-plus/screenshot-search-bar.png" style="max-width:275px" alt="Search bar screenshot"/>
 
 To make the search bar, I had to leverage the [Canvas REST API](https://canvas.instructure.com/doc/api/). 
 
@@ -114,7 +115,7 @@ This means that your search content is always up to date, and once loaded, typin
 
 The most common pitfall of past versions was searching modules. As mentioned earlier, modules are groups of pages, but in the API, the pages are not included, meaning getting modules of a course looks something like this:
 
-![Behind%20Canvas+%20e7c79f0680d44581a09d001b4aa28db9/Untitled%202.png](Behind%20Canvas+%20e7c79f0680d44581a09d001b4aa28db9/Untitled%202.png)
+![JSON Output of Canvas API](/post-assets/behind-canvas-plus/api-json-output.png)
 
 Typical /modules API request, which doesn't include the items in the module.
 
@@ -132,7 +133,8 @@ The biggest challenge with improving speed is that I can only control the front-
 
 A side benefit of this would be link previews, like the ones in google docs.
 
-![Behind%20Canvas+%20e7c79f0680d44581a09d001b4aa28db9/Untitled%203.png](Behind%20Canvas+%20e7c79f0680d44581a09d001b4aa28db9/Untitled%203.png)
+<br>
+<img src="/post-assets/behind-canvas-plus/link-previews.png" style="max-width:350px" alt="Link previews in Google Docs"/>
 
 ### Dark Mode
 
@@ -140,7 +142,7 @@ Not everyone likes this feature, and even I personally am on the fence about it,
 
 It uses a CSS file to override the default styles of Canvas, so you would think you could just inject it normally, as shown on the right, but dark mode is toggleable in the settings menu, meaning its injection is conditional. To achieve this, the CSS is injected programmatically.
 
-![Behind%20Canvas+%20e7c79f0680d44581a09d001b4aa28db9/Untitled%204.png](Behind%20Canvas+%20e7c79f0680d44581a09d001b4aa28db9/Untitled%204.png)
+![CSS Programmatic Injection](/post-assets/behind-canvas-plus/css-programmatic-injection.png)
 
 There are other ways to inject programatically, but I simply add  a <style> tag using a content script:
 
@@ -153,9 +155,18 @@ link.rel = "stylesheet";
 if(true /* If dark mode is turned on */) document.getElementsByTagName('html')[0].appendChild(link);
 ```
 
-![Behind%20Canvas+%20e7c79f0680d44581a09d001b4aa28db9/Untitled%205.png](Behind%20Canvas+%20e7c79f0680d44581a09d001b4aa28db9/Untitled%205.png)
+<br>
 
-Injection was by far the easiest part of dark mode, though. Creating the CSS file took months to perfect. Canvas using entirely unique class names for some of its components, so it's hard to apply a dark theme to everything. The only workaround I thought of was to make CSS selectors based on the tags of a component, like this:
+<div class="split">
+  <div class="side left w-50">
+    <img src="/post-assets/behind-canvas-plus/random-class-ids.png" style="max-width:350px" alt="Random class IDs in Canvas"/> 
+    <br>
+  </div>
+  <div class="side right w-50">
+    Injection was by far the easiest part of dark mode, though. Creating the CSS file took months to perfect. Canvas using entirely unique class names for some of its components, so it's hard to apply a dark theme to everything. The only workaround I thought of was to make CSS selectors based on the tags of a component, like this:
+  </div>
+</div>
+<br>
 
 `ul[role="listbox"] li span`
 
@@ -199,3 +210,5 @@ My extension has amazing features already, but I'm not ready to stop. I think I 
 As mentioned throughout the article and on GitHub, I have tons of plans for features, like client-side links, sidebar customization, email peeking, task manager integration, and more!
 
 You can follow my progress on [GitHub](http://github.com/adrWasTaken/CanvasPlus), a star would be appreciated! ⭐
+
+*Thumbnail Credit: https://www.flickr.com/photos/paullew/3576975680*
