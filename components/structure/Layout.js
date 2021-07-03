@@ -14,7 +14,7 @@ export default function Layout({ children }) {
     useEffect(() => {
         if(children !== displayChildren) {
             setTimeout(() => {
-                setDisplayChildren(children)
+                //setDisplayChildren(children)
             }, 1000);
         }
     }, [children, setDisplayChildren, displayChildren])
