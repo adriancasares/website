@@ -12,7 +12,11 @@ export default function Layout({ children }) {
     }, [])
 
     useEffect(() => {
-        if(children !== displayChildren) setTransitionStage("fadeOut")
+        if(children !== displayChildren) {
+            setTimeout(() => {
+                setDisplayChildren(children)
+            }, 1000);
+        }
     }, [children, setDisplayChildren, displayChildren])
 
     return (
