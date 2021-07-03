@@ -8,26 +8,20 @@ export default function Layout({ children }) {
     const [transitionStage, setTransitionStage] = useState("fadeOut")
 
     useEffect(() => {
-        setTransitionStage("fadeIn")
+        
     }, [])
 
     useEffect(() => {
         if(children !== displayChildren) {
+            
             setTimeout(() => {
-                if(Math.random() > .5) {
-                    setDisplayChildren(children)
-                }
+                setDisplayChildren(children);
             }, 1000);
         }
     }, [children, setDisplayChildren, displayChildren])
 
     return (
-        <div className={`${styles.Layout} ${styles[transitionStage]}`} onTransitionEnd={() => {
-            if (transitionStage === "fadeOut") {
-                setDisplayChildren(children);
-                setTransitionStage("fadeIn");
-              }
-        }}>
+        <div className={`${styles.Layout} ${styles[transitionStage]}`}>
             { displayChildren }
         </div>
     )
