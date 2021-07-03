@@ -3,7 +3,6 @@ import styles from './ArticlePreview.module.css'
 import Link from 'next/link'
 
 export default function Article(props) {
-    console.log(`/post-assets/${props.data.id}/${props.data.thumbnail}`);
     return (
         <article className={styles.ArticlePreview}>
             <Link href={`/blog/${props.data.id}`}>

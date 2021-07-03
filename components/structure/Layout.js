@@ -18,7 +18,6 @@ export default function Layout({ children }) {
     return (
         <div className={`${styles.Layout} ${styles[transitionStage]}`} onTransitionEnd={() => {
             if (transitionStage === "fadeOut") {
-                console.log("fading out");
                 setDisplayChildren(children);
                 setTransitionStage("fadeIn");
               }

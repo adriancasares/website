@@ -47,7 +47,7 @@ export default function BlogPage({ name, date, content }) {
           <div className={styles.FullPageArticle__Content}>
             <h1 style={{fontWeight:600}}>{ name }</h1>
             <p style={{marginTop:20,marginBottom:70,color:'#999'}}> { `${monthAbbrev(dateObject.getMonth())} ${dateObject.getDate()} ${dateObject.getFullYear()}` } </p>
-            <ReactMarkdown components={components} children={content} rehypePlugins={rehypeRaw}/>
+            <ReactMarkdown components={components} children={content} rehypePlugins={[rehypeRaw]}/>
           </div>
         </div>
       </main>

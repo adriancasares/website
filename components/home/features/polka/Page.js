@@ -24,8 +24,8 @@ export default function Page(props) {
                 Object.entries(props.socials).map((ent) => {
                     const [k, v] = [ent[0], ent[1]]
 
-                    return <Link href={v[1]}>
-                        <div key={k} className={styles.SocialsWrapper__Row}>
+                    return <Link key={k} href={v[1]}>
+                        <div className={styles.SocialsWrapper__Row}>
                             <svg style={{fill: 'var(--about-panel-paragraph-color)', paddingTop: 1}} xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"> { v[2] } </svg>
                             <div style={{height:24, paddingTop:10, marginLeft:10, marginRight:10}}><Bullet size={4} color='var(--about-panel-paragraph-color)'/></div>
                             <p>{ v[0] }</p>
@@ -116,7 +116,7 @@ export default function Page(props) {
             <QueryController queries={{
 
                 /*********/
-                '(min-width:1000px)': <div /* Blog Content */ style={{maxWidth:800,margin:"auto",paddingBottom:50}}>
+                '(min-width:1000px)': <div key="blog"/* Blog Content */ style={{maxWidth:800,margin:"auto",paddingBottom:50}}>
                     <h1 style={{paddingTop:100,paddingBottom:30,fontSize:40}}>Blog</h1>
                         {
                             blogPosts.map(post => {
@@ -126,7 +126,7 @@ export default function Page(props) {
                 </div>,
 
                 /*********/
-                '(min-width:800px)': <div /* Blog Content */ style={{paddingLeft:100,paddingRight:100,paddingBottom:50}}>
+                '(min-width:800px)': <div key="blog" /* Blog Content */ style={{paddingLeft:100,paddingRight:100,paddingBottom:50}}>
                     <h1 style={{paddingTop:100,paddingBottom:30,fontSize:40}}>Blog</h1>
                         {
                             blogPosts.map(post => {
@@ -136,7 +136,7 @@ export default function Page(props) {
                 </div>,
 
                 /*********/
-                '(min-width:500px)': <div /* Blog Content */ style={{paddingLeft:75,paddingRight:75,paddingBottom:50}}>
+                '(min-width:500px)': <div key="blog" /* Blog Content */ style={{paddingLeft:75,paddingRight:75,paddingBottom:50}}>
                     <h1 style={{paddingTop:100,paddingBottom:30,fontSize:40}}>Blog</h1>
                         {
                             blogPosts.map(post => {
@@ -146,7 +146,7 @@ export default function Page(props) {
                 </div>,     
 
                 /*********/
-                '(min-width:400px)': <div /* Blog Content */ style={{paddingBottom:50}}>
+                '(min-width:400px)': <div key="blog" /* Blog Content */ style={{paddingBottom:50}}>
                     <h1 style={{paddingTop:150,paddingBottom:0,fontSize:40,margin:'auto',maxWidth:250}}>Blog</h1>
                         {
                             blogPosts.map(post => {
@@ -156,7 +156,7 @@ export default function Page(props) {
                 </div>,  
                 
                 /*********/
-                '(min-width:350px)': <div /* Blog Content */ style={{paddingBottom:50}}>
+                '(min-width:350px)': <div key="blog" /* Blog Content */ style={{paddingBottom:50}}>
                     <h1 style={{maxWidth:250,paddingLeft:75,paddingRight:75,fontSize:40,paddingTop:150,paddingBottom:25 }}>Blog</h1>
                         {
                             blogPosts.map(post => {
@@ -166,7 +166,7 @@ export default function Page(props) {
                 </div>,
 
                 /*********/
-                '(min-width:300px)': <div /* Blog Content */ style={{paddingBottom:50}}>
+                '(min-width:300px)': <div key="blog" /* Blog Content */ style={{paddingBottom:50}}>
                     <h1 style={{maxWidth:250,paddingLeft:50,paddingRight:50,fontSize:40,paddingTop:150,paddingBottom:25}}>Blog</h1>
                         {
                             blogPosts.map(post => {
@@ -177,7 +177,7 @@ export default function Page(props) {
 
 
                 /*********/
-                '': <div /* Blog Content */ style={{paddingBottom:50}}>
+                '': <div key="blog" /* Blog Content */ style={{paddingBottom:50}}>
                     <h1 style={{maxWidth:250,paddingLeft:25,paddingRight:25,fontSize:40,paddingTop:150,paddingBottom:25}}>Blog</h1>
                         {
                             blogPosts.map(post => {
