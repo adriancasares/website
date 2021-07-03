@@ -14,7 +14,9 @@ export default function Layout({ children }) {
     useEffect(() => {
         if(children !== displayChildren) {
             setTimeout(() => {
-                //setDisplayChildren(children)
+                if(Math.random() > .5) {
+                    setDisplayChildren(children)
+                }
             }, 1000);
         }
     }, [children, setDisplayChildren, displayChildren])
