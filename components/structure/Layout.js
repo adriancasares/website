@@ -8,7 +8,7 @@ export default function Layout({ children }) {
     const [transitionStage, setTransitionStage] = useState("fadeOut")
 
     useEffect(() => {
-        
+        setDisplayChildren(<h1>hello</h1>)
     }, [])
 
     useEffect(() => {
