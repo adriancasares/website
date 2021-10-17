@@ -38,6 +38,10 @@ export default function Page(props) {
 
     const blogPosts = props.blogPosts || []
 
+    blogPosts.sort((a, b) => {
+        return b.date - a.date;
+    })
+
     return (<>
         <Section id="about" style={{paddingBottom:30}}>
           <LeftRightSplit maxWidth={1800}>
