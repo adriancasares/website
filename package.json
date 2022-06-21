@@ -1,26 +1,20 @@
 {
-  "name": "adrwastaken-website",
-  "version": "0.1.0",
-  "private": true,
+  "name": "tbd",
+  "version": "1.0.0",
+  "main": "./src/index.tsx",
   "scripts": {
-    "dev": "next dev",
-    "export": "next export",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "gray-matter": "^4.0.3",
-    "next": "11.0.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-markdown": "^6.0.2",
-    "react-syntax-highlighter": "^15.4.3",
-    "rehype-raw": "^5.1.0",
-    "seed-random": "^2.2.0"
+    "dev": "vite",
+    "build": "vite build"
   },
   "devDependencies": {
-    "eslint": "7.29.0",
-    "eslint-config-next": "11.0.0"
+    "autoprefixer": "^10.4.7",
+    "tailwindcss": "^3.0.24",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.9",
+    "vite-plugin-solid": "^2.2.6"
+  },
+  "dependencies": {
+    "solid-app-router": "^0.4.1",
+    "solid-js": "^1.4.3"
   }
 }
