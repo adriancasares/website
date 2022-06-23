@@ -7,7 +7,7 @@ export default function SocialLink(props: {
   children?: JSX.Element;
 }) {
   return (
-    <Link href={props.url}>
+    <Link href={props.url} class="unstyled">
       <div className="hover:bg-slate-100 rounded-md py-1 px-2 transition">
         <div className="flex flex-row items-center gap-2">
           <div className="text-primary-light-medium text-lg">

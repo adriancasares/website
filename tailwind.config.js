@@ -19,6 +19,15 @@ module.exports = {
         "primary-off-color": "#F2EFDE",
         "primary-link": "#57b1c9",
       },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+      },
+      animation: {
+        "fade-in": "fadeIn 150ms ease-in",
+      },
     },
   },
   plugins: [

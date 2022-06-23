@@ -1,10 +1,17 @@
 import { FiArrowRight, FiClock } from "solid-icons/fi";
-import { createSignal } from "solid-js";
+import { createEffect, createSignal } from "solid-js";
 import { useNavigate } from "solid-app-router";
 import ArticleMeta from "../../lib/types/ArticleMeta";
+import { useTransition } from "../../lib/context/transition";
 
 export default function ArticlePreview(props: { article: ArticleMeta }) {
+  const [fadePage, setFadePage] = useTransition();
+
   const [expanding, setExpanding] = createSignal(false);
+
+  createEffect(() => {
+    setFadePage(expanding());
+  });
 
   const screenHeight = window.innerHeight;
 
@@ -17,7 +24,7 @@ export default function ArticlePreview(props: { article: ArticleMeta }) {
   return (
     <a
       ref={div}
-      className={`relative z-10 max-w-2xl mx-auto border-r-4 border-primary-accent py-6 px-8 gap-2 flex flex-col group cursor-pointer transition-all duration-500 scale-100 ${
+      className={`unstyled relative z-10 max-w-2xl mx-auto border-r-4 border-primary-accent py-6 px-8 gap-2 flex flex-col group cursor-pointer transition-all duration-500 scale-100 ${
         expanding() ? "border-r-0 z-20" : ""
       }`}
       href={`/blog/${props.article.id}`}
@@ -43,7 +50,7 @@ export default function ArticlePreview(props: { article: ArticleMeta }) {
         <p>{props.article.excerpt}</p>
       </div>
       <div
-        className="bg-white w-full h-full scale-100 absolute top-0 left-0 transition-all duration-1000"
+        className="bg-white w-full h-full scale-100 absolute top-0 left-0 transition-all duration-1000 ease-in"
         style={{
           "--tw-scale-x": expanding()
             ? (screenWidth / div.getBoundingClientRect().width) * 2

@@ -12,11 +12,16 @@ export default function ArticleWrapper(props: {
   const article: ArticleMeta = data.default[props.id];
 
   return (
-    <div>
+    <div className="py-8 animate-fade-in">
       {/* @ts-ignore */}
-      <ErrorBoundary fallback={(e) => <div>An Error Occured</div>}>
-        <div className="max-w-4xl mx-auto my-8 lg:my-16 px-8 flex flex-col gap-2">
-          <div className="lg:fixed top-10 left-10 flex justify-center">
+      <ErrorBoundary
+        fallback={(e) => {
+          console.error(e);
+          return <div>An Error Occured</div>;
+        }}
+      >
+        <div className="max-w-4xl mx-auto lg:mt-16 px-8 flex flex-col gap-2">
+          <div className="lg:fixed top-10 left-10 flex justify-center mb-5">
             <Link href="/?from=post">
               <div className="w-12 h-12 bg-slate-100 rounded-full flex justify-center items-center hover:bg-slate-200 transition-colors cursor-pointer mx-auto">
                 <FiArrowLeft className="absolute text-xl text-primary-light opacity-0 scale-x-0 lg:opacity-100 lg:transition-all lg:scale-x-100  lg:duration-300 transition-transform origin-right" />
@@ -40,6 +45,9 @@ export default function ArticleWrapper(props: {
               })}
             </p>
           </div>
+        </div>
+        <div className="max-w-4xl mx-auto px-8 py-8">
+          <hr />
         </div>
         {props.children}
       </ErrorBoundary>

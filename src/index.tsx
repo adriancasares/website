@@ -1,4 +1,5 @@
 import { render } from "solid-js/web";
+import "highlight.js/styles/github.css";
 import "./global.css";
 import { Router, Routes, Route } from "solid-app-router";
 import Home from "./pages/home/Home";

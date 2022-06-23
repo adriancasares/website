@@ -18,7 +18,8 @@ h5 {
   @apply font-serif text-lg text-primary-light-strong;
 }
 
-p {
+p,
+li {
   @apply text-primary-light leading-loose text-sm;
 }
 
@@ -30,7 +31,7 @@ ul {
   @apply flex flex-col gap-2;
 }
 
-a {
+a:not(.unstyled) {
   @apply text-primary-link box-border underline;
 }
 
