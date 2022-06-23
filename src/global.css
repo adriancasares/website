@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1 {
+  @apply font-serif text-4xl text-primary-light-strong font-bold;
+}
+
+h2 {
+  @apply font-serif text-4xl text-primary-light-strong font-semibold leading-relaxed;
+}
+
+h3 {
+  @apply font-serif text-2xl text-primary-light-strong;
+}
+
+h5 {
+  @apply font-serif text-lg text-primary-light-strong;
+}
+
+p {
+  @apply text-primary-light leading-loose text-sm;
+}
+
+li {
+  @apply list-disc list-inside;
+}
+
+ul {
+  @apply flex flex-col gap-2;
+}
+
+a {
+  @apply text-primary-link box-border underline;
+}
+
+.article-h3 {
+  @apply font-serif text-2xl text-primary-light-strong;
+}
