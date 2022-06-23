@@ -38,3 +38,27 @@ a:not(.unstyled) {
 .article-h3 {
   @apply font-serif text-2xl text-primary-light-strong;
 }
+
+body.theme-1 {
+  --accent-color: #a22c9d;
+  --accent-color-light: #f0e4f7;
+  --off-color: #ffcfb1;
+}
+
+body.theme-2 {
+  --accent-color: #e36b40;
+  --accent-color-light: #ffeee6;
+  --off-color: #cae7e8;
+}
+
+body.theme-3 {
+  --accent-color: #e14689;
+  --accent-color-light: #fff2fc;
+  --off-color: #f2efde;
+}
+
+body.theme-4 {
+  --accent-color: #a22c9d;
+  --accent-color-light: #f0e4f7;
+  --off-color: #ffcfb1;
+}

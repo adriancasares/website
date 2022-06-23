@@ -4,8 +4,25 @@ import "./global.css";
 import { Router, Routes, Route } from "solid-app-router";
 import Home from "./pages/home/Home";
 import Article from "./pages/article/Article";
+import seed from "seed-random";
 
 const Index: Function = () => {
+  const themeMax = 3;
+
+  const today = new Date();
+
+  const useSeed = true;
+
+  const seeded = seed(
+    useSeed
+      ? `${today.getMonth() + 1}-${today.getDate()}-${today.getFullYear()}`
+      : Math.random()
+  );
+
+  const theme = Math.floor(seeded() * themeMax) + 1;
+
+  document.body.classList.add(`theme-${theme}`);
+
   return (
     <>
       {/* @ts-ignore */}

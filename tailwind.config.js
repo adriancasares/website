@@ -14,10 +14,10 @@ module.exports = {
         "primary-light-medium": "#676767",
         "primary-light": "#9CA3AF",
         "primary-light-weak": "#e1e5ed",
-        "primary-accent": "#E14689",
-        "primary-accent-light": "#FFF2FC",
-        "primary-off-color": "#F2EFDE",
-        "primary-link": "#57b1c9",
+        "primary-accent": "var(--accent-color, #333333  )",
+        "primary-accent-light": "var(--accent-color-light, #d4d4d4)",
+        "primary-off-color": "var(--off-color, #eaeaea)",
+        "primary-link": "var(--accent-color, #57b1c9)",
       },
       keyframes: {
         fadeIn: {
