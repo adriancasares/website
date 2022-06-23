@@ -1,0 +1,12 @@
+{
+  "behind-canvas-plus": {
+    "title": "Behind Canvas+",
+    "date": 1625288400000,
+    "excerpt": "In January 2021, I released Canvas+ to the chrome web store, a chrome extension that improves your experience using Canvas, the LMS developed by Instructure. This blog post is a deep dive into the tech that makes it possible."
+  },
+  "gradients-and-macos": {
+    "title": "Gradients and MacOS",
+    "date": 1634489958000,
+    "excerpt": "It's been a while! This week I talked about adding gradient sidebars to my chrome extension, switching to MacOS, and some other stuff in between."
+  }
+}
