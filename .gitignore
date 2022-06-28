@@ -5,3 +5,4 @@ coverage
 /dist
 stats.html
 .vscode
+temp
