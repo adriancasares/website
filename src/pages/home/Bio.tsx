@@ -14,15 +14,15 @@ export default function Bio() {
         <div className="flex flex-col gap-6">
           <h3>Adrian Casares</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-            vestibulum, sapien eget fermentum facilisis, ipsum nisi mattis
-            metus, eget congue quam nibh porttitor quam. Nullam tincidunt et
-            nisl quis mattis. Donec a eleifend turpis. Phasellus vitae augue
-            pellentesque velit maximus finibus in in lacus. Morbi vel nisi vitae
-            purus tempus feugiat a et lacus. Donec congue dapibus felis, ac
-            lobortis turpis fringilla eget. Duis nec venenatis lectus, et ornare
-            nisi. Integer eleifend nulla vel porttitor varius. Duis est massa,
-            pellentesque non interdum sagittis, bibendum non risus.
+            My name is Monsieur Adrian Casares. I've been maintaining this
+            website on and off since 2019, but most stuff you'll find is from
+            2021 and onwards. I'm a student software engineer in high school,
+            and I'm currently working on Canvas+ and Scorecard (both
+            school-related chrome extensions). Right now, I make stuff hoping to
+            make a small contribution to my interests. In the future, I'm
+            interested in Artificial Intelligence -- We can eliminate damaging
+            job shortages and decrease our dependence on the harmful parts of
+            tech.
           </p>
         </div>
         <div className="mt-14 w-52 max-w-4xl">
