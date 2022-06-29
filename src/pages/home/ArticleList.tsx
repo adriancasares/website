@@ -5,8 +5,10 @@ import * as data from "../../../public/blog.json";
 import { lazy } from "solid-js";
 
 export default function ArticleList() {
+  // @ts-ignore
   const articles: ArticleMeta[] = Object.keys(data.default).map((id) => {
     return {
+      // @ts-ignore
       ...data.default[id],
       id,
     };
@@ -25,24 +27,6 @@ export default function ArticleList() {
             .map((article) => {
               return <ArticlePreview article={article} />;
             })}
-          {/* <ArticlePreview
-            article={{
-              title: "Article Title",
-              excerpt:
-                "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
-              id: "article-id",
-              date: new Date().getTime(),
-            }}
-          />
-          <ArticlePreview
-            article={{
-              title: "Article Title",
-              excerpt:
-                "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
-              id: "article-id",
-              date: new Date().getTime(),
-            }}
-          /> */}
         </div>
       </div>
     </div>
