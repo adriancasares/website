@@ -13,7 +13,7 @@ export default function ArticleList() {
   });
 
   return (
-    <div className="px-20 bg-primary-off-color">
+    <div className="bg-primary-off-color sm:px-20 px-10">
       <div className="max-w-2xl mx-auto py-16 flex flex-col gap-8">
         <h1>Blog</h1>
         <div className="flex flex-col gap-4">

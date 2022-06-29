@@ -8,7 +8,7 @@ import EmailMe from "./EmailMe";
 
 export default function Bio() {
   return (
-    <div className="px-20">
+    <div className="sm:px-20 px-10">
       <div className="md:flex flex-row gap-16 lg:gap-32 max-w-4xl mx-auto my-16">
         <div className="flex flex-col gap-6">
           <h3>Adrian Casares</h3>
