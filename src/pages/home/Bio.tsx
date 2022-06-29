@@ -4,8 +4,7 @@ import {
   IoMailUnreadOutline,
   IoLogoInstagram,
 } from "solid-icons/io";
-
-import { FiMail } from "solid-icons/fi";
+import EmailMe from "./EmailMe";
 
 export default function Bio() {
   return (
@@ -27,14 +26,12 @@ export default function Bio() {
         </div>
         <div className="mt-14 w-52 max-w-4xl">
           <p className="text-primary-accent pl-2 font-mono mb-2">find me</p>
+          <EmailMe>me@adriancasares.com</EmailMe>
           <SocialLink
             name="adriancasares"
             url="https://github.com/adriancasares/"
           >
             <IoLogoGithub />
-          </SocialLink>
-          <SocialLink name="email me" url="/email/">
-            <FiMail />
           </SocialLink>
           <SocialLink
             name="adrian.main.character"

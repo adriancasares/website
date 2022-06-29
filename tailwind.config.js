@@ -24,9 +24,21 @@ module.exports = {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        fadeInRight: {
+          "0%": { opacity: "0", transform: "translateX(-5%);" },
+          "85%": { opacity: "1" },
+          "100%": { opacity: "1", transform: "translateX(0%);" },
+        },
+        bounceIn: {
+          "0%": { transform: "scale(0)" },
+          "65%": { transform: "scale(1.1)" },
+          "100%": { transform: "scale(1)" },
+        },
       },
       animation: {
         "fade-in": "fadeIn 150ms ease-in",
+        "fade-in-right": "fadeInRight 300ms linear",
+        "bounce-in": "bounceIn 1000ms cubic-bezier(.14,.59,0,1.4)",
       },
     },
   },

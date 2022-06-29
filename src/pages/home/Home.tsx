@@ -8,6 +8,9 @@ import Bio from "./Bio";
 
 function HomeInner() {
   const [fadePage, setFadePage] = useTransition();
+
+  document.querySelector("title").innerText = "Home - Adrian Casares";
+
   return (
     <PageWrapper classNameAppend="">
       <div

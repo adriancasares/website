@@ -3,10 +3,19 @@ import PageWrapper from "../../components/core/PageWrapper";
 import { useParams, useNavigate } from "solid-app-router";
 import { ErrorBoundary, lazy } from "solid-js";
 
+// @ts-ignore
+import * as data from "../../../public/blog.json";
+import ArticleMeta from "../../lib/types/ArticleMeta";
+
 export default function Article() {
   const params = useParams();
   const navigate = useNavigate();
   const Article = lazy(() => import(`./posts/${params.id}.tsx`));
+
+  const article: ArticleMeta = data.default[params.id];
+  document.querySelector(
+    "title"
+  ).innerText = `${article.title} - Adrian Casares`;
 
   return (
     <PageWrapper>
