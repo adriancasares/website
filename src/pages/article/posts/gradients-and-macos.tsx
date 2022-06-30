@@ -6,6 +6,7 @@ import Image from "../Image";
 import highlight from "highlight.js";
 import CodeBlock from "../CodeBlock";
 import Split from "../Split";
+import InlineCode from "../InlineCode";
 export default function Article() {
   return (
     <ArticleWrapper id="gradients-and-macos">
@@ -61,11 +62,7 @@ export default function Article() {
           favorites:
         </p>
 
-        <Image
-          src="gradient-sidebars.png"
-          alt="Gradient Sidebars"
-          postId="gradients-and-macos"
-        />
+        <Image src="gradient-sidebars.png" alt="Gradient Sidebars" />
 
         <p>
           Of course, there's literally trillions of gradient combinations, and
@@ -78,18 +75,17 @@ export default function Article() {
           Adding gradient sidebars was also a great opportunity to improve the
           capabilities of the sidebar color picker. Instead of having to go to
           another website to chose a custom color, it's right there, alongside
-          gradients. I used `react-color` to get this done, so huge props to
-          that developer. I decided to use a modified sketch color picker, but
-          you can use the pickers from almost every big app: Chrome, Photoshop,
-          you name it. This turned out to be a great small update - gradients
-          are one of my favorite features right now!
+          gradients. I used <InlineCode>react-color</InlineCode> to get this
+          done, so huge props to that developer. I decided to use a modified
+          sketch color picker, but you can use the pickers from almost every big
+          app: Chrome, Photoshop, you name it. This turned out to be a great
+          small update - gradients are one of my favorite features right now!
         </p>
 
         <Split
           leftWidth="w-1/2"
           left={
             <Image
-              postId="gradients-and-macos"
               src="color-picker-old.png"
               alt="Color Picker (Before)"
               caption="Color Picker (Before)"
@@ -98,7 +94,6 @@ export default function Article() {
           rightWidth="w-1/2"
           right={
             <Image
-              postId="gradients-and-macos"
               src="color-picker-new.png"
               alt="Color Picker (After)"
               caption="Color Picker (After)"
@@ -200,11 +195,7 @@ export default function Article() {
           least compared to their exorbitant markups)
         </p>
 
-        <Image
-          alt="MacBook Air Order"
-          postId="gradients-and-macos"
-          src="macbook-air-delivered.jpeg"
-        />
+        <Image alt="MacBook Air Order" src="macbook-air-delivered.jpeg" />
 
         <p>
           Let's talk about Apple's education discount. Until September 27th,
@@ -214,11 +205,7 @@ export default function Article() {
           Mac.
         </p>
 
-        <Image
-          alt="Apple AirPods Discount"
-          postId="gradients-and-macos"
-          src="apple-airpods-discount.png"
-        />
+        <Image alt="Apple AirPods Discount" src="apple-airpods-discount.png" />
 
         <p>
           However, the true value of this discount comes when you abuse it. For

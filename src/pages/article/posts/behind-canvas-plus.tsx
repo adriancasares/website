@@ -6,6 +6,7 @@ import Image from "../Image";
 import highlight from "highlight.js";
 import CodeBlock from "../CodeBlock";
 import Split from "../Split";
+import InlineCode from "../InlineCode";
 export default function Article() {
   return (
     <ArticleWrapper id="behind-canvas-plus">
@@ -40,11 +41,7 @@ export default function Article() {
           Before I made the first version of the extension, many of my teachers
           would use the modules feature for their Canvas courses.
         </p>
-        <Image
-          src="modules.png"
-          alt="A screenshot of the modules feature"
-          postId="behind-canvas-plus"
-        />
+        <Image src="modules.png" alt="A screenshot of the modules feature" />
         <p>
           Modules are essentially groups of pages, and that's how most teachers
           organize their content. They work pretty well, but some classes have
@@ -144,7 +141,6 @@ scrollDownButton.addEventListener("click", function(){
           buying it:
         </p>
         <Image
-          postId="behind-canvas-plus"
           src="create-a-developer-account.png"
           alt="Create a Developer Account"
         />
@@ -167,11 +163,7 @@ scrollDownButton.addEventListener("click", function(){
           The search box is without doubt the most universally liked feature. No
           matter your preferences, this tool will be hard to live without.
         </p>
-        <Image
-          alt="Search bar screenshot"
-          postId="behind-canvas-plus"
-          src="screenshot-search-bar.png"
-        />
+        <Image alt="Search bar screenshot" src="screenshot-search-bar.png" />
         <p>
           To make the search bar, I had to leverage the{" "}
           <Link href="https://canvas.instructure.com/doc/api/">
@@ -203,22 +195,24 @@ scrollDownButton.addEventListener("click", function(){
         <p>
           Your search results are also cached, so it will take a few seconds
           when you first install the extension, and thereafter it's lightning
-          fast. Results are saved in two places, `sessionStorage` and chrome
-          storage:
+          fast. Results are saved in two places,{" "}
+          <InlineCode>sessionStorage</InlineCode> and chrome storage:
         </p>
         <p>
-          - `sessionStorage` stores strings of data (presumably) in RAM until
-          the end of your session. This means that the data only exists on the
-          tab where you set it. If you click on a link to another website (of a
-          different domain), the data is gone (unless you opened it in a new
-          tab). And of course, if you close the tab, your data is gone. So while
-          `sessionStorage` would not work to store data long-term, it's much
-          faster than chrome storage.
+          - <InlineCode>sessionStorage</InlineCode> stores strings of data
+          (presumably) in RAM until the end of your session. This means that the
+          data only exists on the tab where you set it. If you click on a link
+          to another website (of a different domain), the data is gone (unless
+          you opened it in a new tab). And of course, if you close the tab, your
+          data is gone. So while <InlineCode>sessionStorage</InlineCode> would
+          not work to store data long-term, it's much faster than chrome
+          storage.
         </p>
         <p>
           - Chrome storage isn't lightning fast, but it's not slow either. It
           stores objects of data on the disk, so obviously it's slower than
-          `sessionStorage`, but it's much faster than re-fetching the data.
+          <InlineCode>seesionStorage</InlineCode>, but it's much faster than
+          re-fetching the data.
         </p>
         <p>
           When caching search results, there is one issue that arises, which is
@@ -227,11 +221,12 @@ scrollDownButton.addEventListener("click", function(){
           theres a simple way the extension decides when to refetch the content:
         </p>
         <p>
-          - If data is in `sessionStorage`, immediately load it. - If the data
-          is not in `sessionStorage` but is in Chrome storage, immediately load
-          it, and refresh in the background — any new content will appear
-          whenever you open a new page. - If the data is not stored anywhere,
-          wait to fetch it.
+          - If data is in <InlineCode>sessionStorage</InlineCode>, immediately
+          load it. - If the data is not in{" "}
+          <InlineCode>sessionStorage</InlineCode> but is in Chrome storage,
+          immediately load it, and refresh in the background — any new content
+          will appear whenever you open a new page. - If the data is not stored
+          anywhere, wait to fetch it.
         </p>
         <p>
           This means that your search content is always up to date, and once
@@ -246,14 +241,14 @@ scrollDownButton.addEventListener("click", function(){
           something like this:
         </p>
         <Image
-          postId="behind-canvas-plus"
           src="api-json-output.png"
           alt="JSON Output of Canvas API"
           caption="Typical /modules API request, which doesn't include the items in the module."
         />
         <p>
-          It turns out you can just add `?include=items` to your query if you
-          need the items, but of course, I didn't read this.
+          It turns out you can just add <InlineCode>?include=items</InlineCode>{" "}
+          to your query if you need the items, but of course, I didn't read
+          this.
         </p>
         <p>
           The early version of search would actually fetch the non-api modules
@@ -299,11 +294,7 @@ scrollDownButton.addEventListener("click", function(){
           A side benefit of this would be link previews, like the ones in google
           docs.
         </p>
-        <Image
-          src="link-previews.png"
-          alt="Link previews in google docs"
-          postId="behind-canvas-plus"
-        />
+        <Image src="link-previews.png" alt="Link previews in google docs" />
         <Heading id="dark-mode">Dark Mode</Heading>
         <p>
           Not everyone likes this feature, and even I personally am on the fence
@@ -320,7 +311,6 @@ scrollDownButton.addEventListener("click", function(){
         <Image
           src="css-programmatic-injection.png"
           alt="CSS Programmatic Injection"
-          postId="behind-canvas-plus"
         />
         <p>
           There are other ways to inject programatically, but I simply add a{" "}
@@ -342,7 +332,6 @@ if(true /* If dark mode is turned on */) document.getElementsByTagName('html')[0
             <Image
               src="random-class-ids.png"
               alt="Random class IDs in Canvas"
-              postId="behind-canvas-plus"
             />
           }
           right={
@@ -357,14 +346,16 @@ if(true /* If dark mode is turned on */) document.getElementsByTagName('html')[0
                   tags of a component, like this:
                 </p>
 
-                <p>`ul[role="listbox"] li span`</p>
+                <p>
+                  <InlineCode>ul[role="listbox"] li span</InlineCode>
+                </p>
 
                 <p>
-                  Altogether, {"`dark.css`"} is just over 300 lines, and it's
-                  pretty compact, though still readable. Right now a dim mode is
-                  in the works, and we (someone else is working with me on dim
-                  mode) were able to copy/paste and swap out the CSS variables
-                  to create a whole new look in 5 minutes.
+                  Altogether, <InlineCode>dark.css</InlineCode> is just over 300
+                  lines, and it's pretty compact, though still readable. Right
+                  now a dim mode is in the works, and we (someone else is
+                  working with me on dim mode) were able to copy/paste and swap
+                  out the CSS variables to create a whole new look in 5 minutes.
                 </p>
               </TextBlock>
             </>

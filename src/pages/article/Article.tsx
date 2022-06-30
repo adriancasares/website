@@ -6,6 +6,7 @@ import { ErrorBoundary, lazy } from "solid-js";
 // @ts-ignore
 import * as data from "../../../public/blog.json";
 import ArticleMeta from "../../lib/types/ArticleMeta";
+import TextBlock from "./TextBlock";
 
 export default function Article() {
   const params = useParams();
