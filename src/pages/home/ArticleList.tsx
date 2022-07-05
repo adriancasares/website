@@ -22,7 +22,7 @@ export default function ArticleList() {
           {articles
             // @ts-ignore
             .sort((a, b) => {
-              return a.date < b.date;
+              return a.date > b.date;
             })
             .map((article) => {
               return <ArticlePreview article={article} />;

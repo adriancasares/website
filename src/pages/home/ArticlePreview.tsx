@@ -30,7 +30,9 @@ export default function ArticlePreview(props: { article: ArticleMeta }) {
       href={`/blog/${props.article.id}`}
       onClick={(e) => {
         e.preventDefault();
+
         setExpanding(!expanding());
+
         setTimeout(() => {
           navigate(`/blog/${props.article.id}`);
         }, 500);
