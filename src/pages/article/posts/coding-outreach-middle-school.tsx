@@ -11,7 +11,7 @@ export default function Article() {
         <p>
           Hello! Once again it's been a long while since posting, but I've found
           myself wanting to talk about my ideas in one concentrated place. This
-          time around, I probably won't stick to a schedule and rather focus
+          time around, I probably won't stick to a schedule and rather focus on 
           quantity over length.
         </p>
         <p>
@@ -22,10 +22,10 @@ export default function Article() {
         </p>
         <Heading id="the-presentation">The Presentation</Heading>
         <p>
-          We had some options for which classes we'd present to, and went with a
+          We had some options for which classes we'd present to and went with a
           project-based "App Creators" elective and an Intro to Coding class.
           This is exactly what we were looking for in our presentation- the
-          first crowd would be more engaged but not necesarily interested, while
+          first crowd would be more engaged but not necessarily interested, while
           the second crowd would be much more challenging, but have more room to
           inspire. For both classes, the teacher advised something more
           interactive than a slideshow, which was our first challenge.
@@ -35,7 +35,7 @@ export default function Article() {
           cover a ton of CS topics, like robotics, artificial intelligence, web
           development, etc. Maybe this would be fun for us, but the exhaustive
           plan wasn't relatable to the average middle schooler. In our second
-          iteration, we condensed most of this into <b>one graphic</b>, and
+          iteration, we condensed most of this into <b>one graphic</b> and
           planned activities for the rest of the afternoon.
         </p>
         <Image src="cs-topic-graphic.png" alt="Graphic of CS Topics" />
@@ -53,38 +53,38 @@ export default function Article() {
           alt="Videos of Relife by Malcolm Roalson"
         />
         <p>
-          This was a shorter segment by design, since we didn't want to lose
+          This was a shorter segment by design since we didn't want to lose
           anyone that fast. For the rest of the presentation, we decided to
           focus on <b>emerging AI technology,</b> for a few reasons:
         </p>
         <ul>
           <li>
-            It's a buzz word that people would be familiar with from movies,
+            It's a buzzword that people would be familiar with from movies,
             news, etc.
           </li>
-          <li>It's an easy demo which can be scary or exciting.</li>
+          <li>It's an easy demo that can be scary or exciting.</li>
         </ul>
         <p>
-          So now, the challenge on our hands was to make interactive activites
+          So now, the challenge on our hands was to make interactive activities
           about such a high-level concept. The first idea we came up with was an{" "}
           <b>ethics discussion,</b> something we were both familiar with from
           our own classes. The big advantage of this is how easy participation
           is: basically, you present the audience with a prompt and have them
           move between two ends of the room based on where they stand. The left
           side of the room was "Strongly Agree" and the right side was "Strongly
-          Disagree". This forces everyone to at formulate a basic opinion, and
+          Disagree". This forces everyone to at least formulate a basic opinion, and
           asking people for their reasoning leads to a lot of back and forth.
           The prompts were:
         </p>
         <ul>
           <li>Computers should replace jobs w/ harsh working conditions.</li>
           <li>Computers should replace jobs in general. </li>
-          <li>A self driving car should decide who's safety to prioritize.</li>
+          <li>A self-driving car should decide who's safety to prioritize.</li>
           <li>We can trust ourselves more than we trust AI.</li>
         </ul>
         <p>
           This went exactly how we expected - there was a lot of back and forth
-          because <b>everyone had a voice and opinion.</b> Usually we were
+          because <b>everyone had a voice and opinion.</b>{" "}Usually, we were
           cutting the discussion off to move on, but even when a question was
           less engaging, we could always call on people without any deflections.
           Of course, bringing starbursts helped too.
@@ -95,7 +95,7 @@ export default function Article() {
             <p>
               We felt like we had hit a gold mine with this activity, but we
               still needed more stuff to pass the time. We knew we wanted a
-              second activity, but decided to have people sit back down so we
+              second activity but decided to have people sit back down so we
               could talk about AI first. We started with this with a graphic
               recapping AI ethics, including some stuff we didn't cover, shown
               to the right.
@@ -121,15 +121,15 @@ export default function Article() {
                 presenting with us, but got COVID) found. We showed the app
                 store page and discussed the danger of AI companions. If you're
                 curious, we talked about the issues with profiting off of
-                people's emotional dependence, and the barriers of a bot having
+                people's emotional dependence, and the barriers to a bot having
                 real empathy. Not to mention, the app has "Infrequent/Mild
                 Sexual Content and Nudity"; not sure what that's about.
               </p>
               <p>
                 We also touched on the difference between supervised and
                 unsupervised learning, mostly so we could include some examples.
-                We simply said stuff like recognizing people's faces in photos
-                is <b>supervised,</b> since the model's job is to categorize
+                We said stuff like recognizing people's faces in photos
+                is <b>supervised</b> since the model's job is to categorize
                 photos into explicit sets. Stuff like social media and product
                 recommendations are <b>unsupervised,</b> where we leave the AI
                 to notice the patterns for us.
@@ -153,13 +153,13 @@ export default function Article() {
               activity than a lecture for the sake of being relatable to someone
               who doesn't care very much. The concept is simple, we show the
               class a fake identity (with a computer-generated picture, of
-              course), and the job of one volunteeer is to answer a question{" "}
+              course), and the job of one volunteer is to answer a question{" "}
               <b>as them.</b> Given the same info, the GPT-3 playground will
               also try to impersonate the identity. The class wins if most of
               them guess the human correctly! OpenAI has a preset menu for the
               playground, which was very useful for keeping it moving! Everyone
-              really enjoyed this activity and the suspense of each reveal was
-              engaging for the whole class. You could tell a lot about people's
+              enjoyed this activity, and each reveal's suspense was engaging for
+              the whole class. You could tell a lot about people's{" "}
               <b>expectations for the AI;</b> some thought the AI would only be
               able to form a simple sentence while others were expecting more
               deception.
@@ -175,7 +175,7 @@ export default function Article() {
         />
 
         <p>
-          I'll throw in the responses for one of the questions below.
+          I'll throw in the responses to one of the questions below.
           Unfortunately, I couldn't fetch the <b>exact</b> OpenAI response from
           the presentation, but I kept rolling until I got a close one.
         </p>
@@ -204,11 +204,11 @@ export default function Article() {
         <p>
           We really enjoyed our time at this middle school! It was very fun
           planning and our two crowds were equally fun to teach. The first
-          class, App Creators, was clearly much more engaged- the 8th graders
+          class, App Creators, was clearly much more engaged; the 8th graders
           were out for an end-of-year celebration which made the audience much
           smaller, but we could tell everyone had a lot more to say and was
           generally more interested. The second class, Intro to Coding, had such
-          a variety of students. Some were not engaged at all- on their phones,
+          a variety of students. Some were not engaged at all: on their phones,
           skipping, sleeping, you name it. Others were talking way more than
           usual, which was rewarding to hear. Day 2 was a tougher crowd for
           sure, but we trusted the process and this is for sure something we're
