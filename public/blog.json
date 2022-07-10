@@ -13,5 +13,10 @@
     "title": "Coding Outreach with Middle School",
     "date": 1656507546000,
     "excerpt": "Three weeks ago, Malcolm Roalson and I went to a middle school as guest speakers to do outreach for computer science. I'm using this post as a reflection of what we achieved and what we're doing in the future!"
+  },
+  "new-website-solid-js": {
+    "title": "New Website with SolidJS",
+    "date": 1657395708000,
+    "excerpt": "I turned off my old website a few months ago, and when I wrote my last post, I had the perfect opportunity for a redesign. I rushed into the coding with SolidJS, TailwindCSS, and Vite. This provided a fast and modern developer experience but wasn't the best fit for my needs."
   }
 }

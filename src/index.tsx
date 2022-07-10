@@ -29,6 +29,7 @@ const Index: Function = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog/:id" element={<Article />} />
+        <p>Unknown Page</p>
       </Routes>
     </>
   );

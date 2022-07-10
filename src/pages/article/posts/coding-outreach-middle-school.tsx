@@ -11,7 +11,7 @@ export default function Article() {
         <p>
           Hello! Once again it's been a long while since posting, but I've found
           myself wanting to talk about my ideas in one concentrated place. This
-          time around, I probably won't stick to a schedule and rather focus on 
+          time around, I probably won't stick to a schedule and rather focus on
           quantity over length.
         </p>
         <p>
@@ -20,14 +20,15 @@ export default function Article() {
           outreach for computer science. I'm using this post as a reflection of
           what we achieved and what we're doing in the future!
         </p>
+        <Image src="photo-in-person.png" alt="Photo in Person" />
         <Heading id="the-presentation">The Presentation</Heading>
         <p>
           We had some options for which classes we'd present to and went with a
           project-based "App Creators" elective and an Intro to Coding class.
           This is exactly what we were looking for in our presentation- the
-          first crowd would be more engaged but not necessarily interested, while
-          the second crowd would be much more challenging, but have more room to
-          inspire. For both classes, the teacher advised something more
+          first crowd would be more engaged but not necessarily interested,
+          while the second crowd would be much more challenging, but have more
+          room to inspire. For both classes, the teacher advised something more
           interactive than a slideshow, which was our first challenge.
         </p>
         <p>
@@ -72,9 +73,9 @@ export default function Article() {
           is: basically, you present the audience with a prompt and have them
           move between two ends of the room based on where they stand. The left
           side of the room was "Strongly Agree" and the right side was "Strongly
-          Disagree". This forces everyone to at least formulate a basic opinion, and
-          asking people for their reasoning leads to a lot of back and forth.
-          The prompts were:
+          Disagree". This forces everyone to at least formulate a basic opinion,
+          and asking people for their reasoning leads to a lot of back and
+          forth. The prompts were:
         </p>
         <ul>
           <li>Computers should replace jobs w/ harsh working conditions.</li>
@@ -84,7 +85,7 @@ export default function Article() {
         </ul>
         <p>
           This went exactly how we expected - there was a lot of back and forth
-          because <b>everyone had a voice and opinion.</b>{" "}Usually, we were
+          because <b>everyone had a voice and opinion.</b> Usually, we were
           cutting the discussion off to move on, but even when a question was
           less engaging, we could always call on people without any deflections.
           Of course, bringing starbursts helped too.
@@ -128,9 +129,9 @@ export default function Article() {
               <p>
                 We also touched on the difference between supervised and
                 unsupervised learning, mostly so we could include some examples.
-                We said stuff like recognizing people's faces in photos
-                is <b>supervised</b> since the model's job is to categorize
-                photos into explicit sets. Stuff like social media and product
+                We said stuff like recognizing people's faces in photos is{" "}
+                <b>supervised</b> since the model's job is to categorize photos
+                into explicit sets. Stuff like social media and product
                 recommendations are <b>unsupervised,</b> where we leave the AI
                 to notice the patterns for us.
               </p>
