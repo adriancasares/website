@@ -7,7 +7,7 @@ import TextBlock from "../TextBlock";
 
 export default function Article() {
   return (
-    <ArticleWrapper id="behind-canvas-plus">
+    <ArticleWrapper id="new-website-solid-js">
       <TextBlock>
         <p>
           I turned off my old website a few months ago, and when I wrote my{" "}

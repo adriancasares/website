@@ -18,5 +18,10 @@
     "title": "New Website with SolidJS",
     "date": 1657395708000,
     "excerpt": "I turned off my old website a few months ago, and when I wrote my last post, I had the perfect opportunity for a redesign. I rushed into the coding with SolidJS, TailwindCSS, and Vite. This provided a fast and modern developer experience but wasn't the best fit for my needs."
+  },
+  "overhauling-canvas-plus": {
+    "title": "Overhauling Canvas+",
+    "date": 1662074128000,
+    "excerpt": "The last major update to Canvas+ was over eight months ago, where I overhauled search and the “More” drawer in the sidebar. For a while, I’ve been intrigued by a complete UI reskin. So here it is - Canvas+ version 1 is in the works."
   }
 }
