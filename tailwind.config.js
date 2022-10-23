@@ -12,7 +12,7 @@ module.exports = {
       colors: {
         "primary-light-strong": "#3A3A3A",
         "primary-light-medium": "#676767",
-        "primary-light": "#9CA3AF",
+        "primary-light": "#8793a4",
         "primary-light-weak": "#e1e5ed",
         "primary-accent": "var(--accent-color, #333333  )",
         "primary-accent-light": "var(--accent-color-light, #d4d4d4)",

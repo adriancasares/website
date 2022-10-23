@@ -20,9 +20,8 @@ export default function ArticleList() {
         <h1>Blog</h1>
         <div className="flex flex-col gap-4">
           {articles
-            // @ts-ignore
             .sort((a, b) => {
-              return a.date < b.date;
+              return a.date < b.date ? 1 : -1;
             })
             .map((article) => {
               return <ArticlePreview article={article} />;
